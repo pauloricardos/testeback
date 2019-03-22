@@ -7,3 +7,5 @@ create table if not exists tb_customer_account (
     unique key (id_customer),
     primary key (cpf_cnpj)
 )
+
+select avg(vl_total) from tb_customer_account where id > 1500 and vl_total > 560
