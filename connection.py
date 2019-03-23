@@ -52,8 +52,21 @@ def orderBySalary(table):
     
     salaries = select("vl_total", table)
     print(salaries)
-
 orderBySalary("tb_customer_account")
 
+# select avg(vl_total) from tb_customer_account where id_customer >= 1500 and vl_total > 560;
+# select vl_total from tb_customer_account where id_customer >= 1500 and vl_total > 560;
+# select count(*) from tb_customer_account where id_customer >= 1500 and vl_total > 560;
+# select * from tb_customer_account
 
-    
+def average(fields, table):
+
+    global c
+
+    numbers = []
+    for vl_total in table:
+        numbers.append("vl_total")
+        listSum = sum(numbers)
+        print (listSum)
+
+average("vl_total", "tb_customer_account")    
